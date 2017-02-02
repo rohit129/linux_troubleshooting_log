@@ -1,0 +1,4 @@
+For managing disc partitions (create, format, resize etc...)
+-> sudo parted 
+-> print (list all disc partitions)
+-> select sda5 (for making change to this partition)
