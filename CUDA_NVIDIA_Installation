@@ -1,0 +1,53 @@
+
+
+http://stackoverflow.com/questions/30820513/what-is-version-of-cuda-for-nvidia-304-125/30820690#30820690
+
+at least 361.00 is required for CUDA 8.0
+at least 352.00 is required for CUDA 7.5
+at least 346.00 is required for CUDA 7.0
+at least 340.00 is required for CUDA 6.5
+at least 331.00 is required for CUDA 6.0
+at least 319.00 is required for CUDA 5.5
+
+***************installing cuda_8 & NVIDIA driver*****************
+########If NVIDIA driver shows X server error do the following########
+########1. stop lighdm -> sudo service lightdm stop########
+########2. For other error see the /var/log/nvidia-installer.log for possible issue and find the process to be killed which runs X server.########
+
+wget https://developer.nvidia.com/compute/cuda/8.0/prod/local_installers/cuda_8.0.44_linux.run
+sh cuda_8.0.44_linux.run
+add “/usr/local/cuda-8.0/bin” in PATH variable in /etc/environment file
+add export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-8.0/lib64 in /etc/profile
+
+***************installing anaconda glabal*****************
+
+wget https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
+change PREFIX=~/$HOME/anaconda3 to PREFIX=/opt/anaconda3 and save it
+run -> bash Anaconda3-4.2.0-Linux-x86_64.sh with root account
+append /opt/anaconda3/bin in /etc/environment PATH variable
+
+install theano and tensorflow as follows:->
+
+:-> conda install theano
+:-> conda install tensorflow
+
+create py27 environment:->
+:-> conda create -n py27 python=2.7 anaconda
+
+Web help for testing theano using GPU/CPU :-> http://deeplearning.net/software/theano/tutorial/using_gpu.html
+:-> THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python check1.py
+
+*****************Enabling CNMEM and CUDNN ******************
+Step-1
+create .theanorc file in HOME directory
+and write in it:
+
+####################
+[lib] cnmem=1
+####################
+
+Step-2
+wget https://developer.nvidia.com/rdp/assets/cudnn-8.0-linux-x64-v5.0-ga.tgz
+Extract cudnn-8.0-linux-x64-v5.0-ga.tgz
+:-> sudo cp /cuda/include/cudnn.h /usr/local/cuda-8.0/include
+:-> sudo cp /cuda/lib64/libcudnn* /usr/local/cuda-8.0/lib64
