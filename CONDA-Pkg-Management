@@ -2,4 +2,13 @@ Problem : conda tensorflow-gpu installation
   should install with pip
     sudo -E /opt/anaconda3/bin/pip install tensorflow-gpu
     
-    
+Problem : NUMPY corrupted
+	# /opt/anaconda3/envs/py27/bin/conda remove -n py27 numpy
+	# /opt/anaconda3/envs/py27/bin/conda install -n py27 numpy
+	# /opt/anaconda3/envs/py27/bin/conda install -n py27 keras
+	$ sudo -E /opt/anaconda3/envs/py27/bin/pip install tensorflow-gpu
+	# /opt/anaconda3/envs/py27/bin/conda install -c https://conda.binstar.org/menpo -n py27 opencv
+	# /opt/anaconda3/envs/py27/bin/conda install -n py27 theano
+	
+
+	 
