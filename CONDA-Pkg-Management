@@ -1,0 +1,5 @@
+Problem : conda tensorflow-gpu installation
+  should install with pip
+    sudo -E /opt/anaconda3/bin/pip install tensorflow-gpu
+    
+    
