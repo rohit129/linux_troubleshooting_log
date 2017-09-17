@@ -1,0 +1,14 @@
+Follow the steps, all you need to do:
+
+    Step 1: Open up a terminal
+    Step 2: sudo nano /etc/default/grub
+    Step 3: At the very end of the string GRUB_CMDLINE_LINUX_DEFAULT, (which in my case was “quiet splash,”) add acpi_backlight=native.
+    The final string, in my case, looks like “quiet splash acpi_backlight=native“
+    Step 4: Close and save the file, and run sudo update-grub and then reboot.
+    
+    Completed !!
+    
+    For more details visit:
+    1) http://anasismail.com/fixing-the-brightness-issue-on-ubuntu-16-04
+    2) https://wiki.archlinux.org/index.php/backlight
+    
