@@ -1,5 +1,8 @@
-Follow the steps, all you need to do:
+Problem:  Brightness is not getting changed in ubuntu 16.04
 
+Solution:
+
+Follow the steps, all you need to do:
     Step 1: Open up a terminal
     Step 2: sudo nano /etc/default/grub
     Step 3: At the very end of the string GRUB_CMDLINE_LINUX_DEFAULT, (which in my case was “quiet splash,”) add acpi_backlight=native.
