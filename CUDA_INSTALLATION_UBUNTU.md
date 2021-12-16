@@ -2,7 +2,7 @@
 
 Cuda toolkit comes with the compatible nvidia driver therefore it is better to remove the any existing nvidia driver otherwise some compatilibilty issues will be faced in installation.
 
-**Step-1:** Remove the previous nvidia driver or any existing cuda installation
+**Step-1:** Remove the previous nvidia driver.
 ```
 sudo apt-get remove --purge nvidia\*
 sudo apt-get autoremove
