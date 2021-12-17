@@ -33,3 +33,16 @@ $ nvcc --version
 **Step-7:** [To fully Verify the cuda](https://xcat-docs.readthedocs.io/en/stable/advanced/gpu/nvidia/verify_cuda_install.html)
 
 Enjoy CUDA 👍 !!
+
+---
+
+## Also install CUDNN
+Step a: [CUDNN download and install](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#download)
+
+Step b: Verify the CUDNN see the [Link](https://stackoverflow.com/questions/31326015/how-to-verify-cudnn-installation) the snapshot is attached below
+
+![cudnn_verify](https://user-images.githubusercontent.com/13540412/146490423-e4facd1d-1266-48d6-9a24-3756727d59da.png)
+
+
+
+
