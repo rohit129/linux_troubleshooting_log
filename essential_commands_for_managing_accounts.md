@@ -47,7 +47,7 @@ Commands
       ```uid=602(rohit) gid=602(rohit) groups=602(rohit),29(sudo)```
       
       This will give the id of the user as well as group id to which your user belongs.
-      
+            
       **Step-1:** *Change the name of login:*
       ```
       $ sudo usermod -l <new-login-name> <old-login-name>
