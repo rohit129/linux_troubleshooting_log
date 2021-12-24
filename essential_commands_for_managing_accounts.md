@@ -61,8 +61,21 @@ Commands
       This will change the groupname of the with new group name.
       verify it using  ``` $ id <login-name> ```
             
-      **Step-3:** *Change the name of home folder by new-login-name.*
+      **Step-3:** *Change the name of home folder by new-login-name:*
       ```
       mv /home/<old-login-name> /home/<new-login-name>
       ```
+      
+      **Step-4:** *Mention the updated path in the /etc/passwd:*
+      
+      Open the file ``` $ sudo nano /etc/passwd ```
+      
+      Output will be like 
+      ```
+      <new-login-name>:x:602:602:<new-login-name>,,,:/home/<old-login-name>:/bin/bash
+      ```
+      
+      Here, change the path ```/home/<old-login-name>``` to ```/home/<new-login-name>``` then Ctrl+o and Ctrl+x to save the file.
+      Now logout of the system and login.  To verify type ```$ pwd ``` and output should be ```/home/<new-login-name>```
+      
       Done!!
