@@ -79,3 +79,19 @@ Commands
       Now logout of the system and login.  To verify type ```$ pwd ``` and output should be ```/home/<new-login-name>```
       
       Done!!
+
+5. ***Lock the user account***
+
+      Command syntax is as ```chage -E 0 {username}```. For example:
+       
+      ```
+      sudo chage -E 0 vivek  
+      ```
+      
+6. ***UnLock the user account***
+
+      Command syntax is as ```chage -E -1 {username}```. For example:
+       
+      ```
+      sudo chage -E -1 vivek  
+      ```      
